@@ -17,8 +17,7 @@ jobs:
 
           - os: windows
             runner: windows-2022
-          - os: macos
-            runner: macos-latest
+
           - os: ubuntu-20.04
             runner: ubuntu-20.04
           - os: ubuntu-22.04
@@ -27,16 +26,9 @@ jobs:
           - arch: x86_64
             os: windows
             msvc: amd64
-          - arch: aarch64
-            os: windows
-            msvc: amd64_arm64
-
           - arch: x86_64
-            os: macos
-            osx_arch: x86_64
-          - arch: aarch64
-            os: macos
-            osx_arch: arm64
+            os: ubuntu-20.04
+
     steps:
       - name: Configure Windows runner
         if: runner.os == 'Windows'
